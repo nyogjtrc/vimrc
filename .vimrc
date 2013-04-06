@@ -1,4 +1,5 @@
-" 打開語法效果
+
+execute pathogen#infect()
 syntax on
 
 set tabstop=4
