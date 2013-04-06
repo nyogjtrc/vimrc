@@ -9,28 +9,18 @@ set softtabstop=4
 set expandtab
 " 縮排為四個空白
 set shiftwidth=4
-" 顯示當前模式
 set showmode
 " 顯示游標所在行列
 set cursorline
 set cursorcolumn
-
-" 在狀態列顯示游標所在行列狀態
 set ruler
-" 顯示行號
 set number
-" hightlight search
-set hls
-" 尋找不分大小寫
-set ignorecase
-" 搜尋時，自動跳到符合的字串
-set incsearch
-" 自動縮排
-set ai
-" 色彩主題 torte
+set hls "hightlight search
+set ignorecase "尋找不分大小寫
+set incsearch "搜尋時，自動跳到符合的字串
+set ai "autoindent
 colorscheme torte 
 set t_Co=256
-"let g:molokai_original = 1
 
 set scrolloff=3 "保持上下有三行的距離
 
@@ -45,9 +35,10 @@ set guicursor+=v:ver90-cursor-blinkwait200-blinkon150-blinkoff150
 " 設定 gvim 的字型
 set guifont=Monaco\ 10
 
-filetype on
-filetype plugin on
-filetype indent on
+" set fileencoding
+set fileencodings=utf-8,big5,cp936,default
+
+filetype plugin indent on
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -62,8 +53,6 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.html set filetype=smarty 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
-"nmap <leader>G  :ToggleGitMenu<CR>
-
 " statusline
 set ls=2
 set statusline=%<%f\ %m%=\ %h%r\ %-19(\ [ASCII:%b]\ [%p%%]\ %3l,%02c%03V%)%y
@@ -71,33 +60,29 @@ set statusline=%<%f\ %m%=\ %h%r\ %-19(\ [ASCII:%b]\ [%p%%]\ %3l,%02c%03V%)%y
 "set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ [%p%]
 highlight StatusLine term=bold,reverse cterm=bold,reverse
 
-" for Taglist
-nnoremap <F12> :TlistToggle<CR>
+" Set F1 - F12 shortcut keys
+nnoremap <silent> <F1> :NERDTree<CR>
+nmap <F2> :WMToggle<cr>
+nnoremap <silent> <F12> :TlistToggle<CR>
 
+" for Taglist
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window=1
 let Tlist_Auto_Open=0
 
-set fileencodings=utf-8,big5,cp936,default
-
-"for netrw
+" for netrw
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 30
 
-""""""""""""""""""""""""""""""
 " winManager setting
-""""""""""""""""""""""""""""""
 let g:winManagerWindowLayout = "TagList|BufExplorer"
 let g:winManagerWidth = 30
 let g:defaultExplorer = 0
 nmap <C-W><C-F> :FirstExplorerWindow<cr>
 nmap <C-W><C-B> :BottomExplorerWindow<cr>
-nmap <F2> :WMToggle<cr> 
 
-""""""""""""""""""""""""""""""
 " BufExplorer
-""""""""""""""""""""""""""""""
 let g:bufExplorerDefaultHelp=0       " Do not show default help.
 let g:bufExplorerShowRelativePath=1  " Show relative paths.
 let g:bufExplorerSortBy='mru'        " Sort by most recently used.
