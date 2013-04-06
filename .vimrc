@@ -19,7 +19,7 @@ set hls "hightlight search
 set ignorecase "尋找不分大小寫
 set incsearch "搜尋時，自動跳到符合的字串
 set ai "autoindent
-colorscheme torte 
+colorscheme torte
 set t_Co=256
 
 set scrolloff=3 "保持上下有三行的距離
@@ -50,7 +50,7 @@ autocmd FileType perl set omnifunc=perlcomplete#Complete
 
 " syntax set
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-au BufRead,BufNewFile *.html set filetype=smarty 
+au BufRead,BufNewFile *.html set filetype=smarty
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " statusline
@@ -60,34 +60,42 @@ set statusline=%<%f\ %m%=\ %h%r\ %-19(\ [ASCII:%b]\ [%p%%]\ %3l,%02c%03V%)%y
 "set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ [%p%]
 highlight StatusLine term=bold,reverse cterm=bold,reverse
 
+" Removing tailing spaces.
+au! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
+
 " Set F1 - F12 shortcut keys
 nnoremap <silent> <F1> :NERDTree<CR>
-nmap <F2> :WMToggle<cr>
-nnoremap <silent> <F12> :TlistToggle<CR>
+map <silent> <F2> :TagbarToggle<CR>
+"nmap <F2> :WMToggle<cr>
+"nnoremap <silent> <F12> :TlistToggle<CR>
 
 " for Taglist
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
-let Tlist_Use_Right_Window=1
-let Tlist_Auto_Open=0
+"let Tlist_Show_One_File=1
+"let Tlist_Exit_OnlyWindow=1
+"let Tlist_Use_Right_Window=1
+"let Tlist_Auto_Open=0
 
 " for netrw
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 30
 
+" Tagbar plugin.
+let g:tagbar_ctags_bin = 'ctags'
+let g:tagbar_width = 30
+
 " winManager setting
-let g:winManagerWindowLayout = "TagList|BufExplorer"
-let g:winManagerWidth = 30
-let g:defaultExplorer = 0
-nmap <C-W><C-F> :FirstExplorerWindow<cr>
-nmap <C-W><C-B> :BottomExplorerWindow<cr>
+"let g:winManagerWindowLayout = "TagList|BufExplorer"
+"let g:winManagerWidth = 30
+"let g:defaultExplorer = 0
+"nmap <C-W><C-F> :FirstExplorerWindow<cr>
+"nmap <C-W><C-B> :BottomExplorerWindow<cr>
 
 " BufExplorer
-let g:bufExplorerDefaultHelp=0       " Do not show default help.
-let g:bufExplorerShowRelativePath=1  " Show relative paths.
-let g:bufExplorerSortBy='mru'        " Sort by most recently used.
-let g:bufExplorerSplitRight=0        " Split left.
-let g:bufExplorerSplitVertical=1     " Split vertically.
-let g:bufExplorerSplitVertSize = 30  " Split width
-let g:bufExplorerUseCurrentWindow=1  " Open in new window.
-autocmd BufWinEnter \[Buf\ List\] setl nonumber 
+"let g:bufExplorerDefaultHelp=0       " Do not show default help.
+"let g:bufExplorerShowRelativePath=1  " Show relative paths.
+"let g:bufExplorerSortBy='mru'        " Sort by most recently used.
+"let g:bufExplorerSplitRight=0        " Split left.
+"let g:bufExplorerSplitVertical=1     " Split vertically.
+"let g:bufExplorerSplitVertSize = 30  " Split width
+"let g:bufExplorerUseCurrentWindow=1  " Open in new window.
+"autocmd BufWinEnter \[Buf\ List\] setl nonumber
