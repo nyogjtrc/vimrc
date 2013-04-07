@@ -2,22 +2,24 @@
 execute pathogen#infect()
 syntax on
 
-set tabstop=4
-" 按下 tab 後會輸入的空白數目
-set softtabstop=4
-" 以空白當tab
+" Replace tab with 4 spaces.
 set expandtab
-" 縮排為四個空白
 set shiftwidth=4
+set softtabstop=4
+
 set showmode
 " 顯示游標所在行列
 set cursorline
 set cursorcolumn
+
 set ruler
 set number
-set hls "hightlight search
-set ignorecase "尋找不分大小寫
-set incsearch "搜尋時，自動跳到符合的字串
+
+" hightlight search
+set hls
+set ignorecase
+set incsearch
+
 set ai "autoindent
 colorscheme torte
 set t_Co=256
@@ -31,9 +33,6 @@ set mouseshape+=n:beam,v:beam,s:beam,i:beam
 set guicursor+=n-v-c:block-cursor-blinkwait300-blinkon90-blinkoff90
 set guicursor+=i:ver3-cursor-blinkwait200-blinkon110-blinkoff110
 set guicursor+=v:ver90-cursor-blinkwait200-blinkon150-blinkoff150
-
-" 設定 gvim 的字型
-set guifont=Monaco\ 10
 
 " set fileencoding
 set fileencodings=utf-8,big5,cp936,default
