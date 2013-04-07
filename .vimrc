@@ -9,7 +9,7 @@ set softtabstop=4
 set showmode
 " 顯示游標所在行列
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 
 set ruler
 set number
