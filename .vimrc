@@ -49,11 +49,20 @@ highlight StatusLine term=bold,reverse cterm=bold,reverse
 " Removing tailing spaces.
 au! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
 
+" Set foldering.
+set foldmethod=manual
+set foldnestmax=3
+highlight Folded ctermbg=black ctermfg=darkcyan
+let g:DisableAutoPHPFolding = 1
+
 " Set F1 - F12 shortcut keys
 nnoremap <silent> <F1> :NERDTree<CR>
 map <silent> <F2> :TagbarToggle<CR>
 "nmap <F2> :WMToggle<cr>
 "nnoremap <silent> <F12> :TlistToggle<CR>
+map <F5> <Esc>:EnableFastPHPFolds<Cr>
+map <F6> <Esc>:EnablePHPFolds<Cr>
+map <F7> <Esc>:DisablePHPFolds<Cr>
 
 " for Taglist
 "let Tlist_Show_One_File=1
