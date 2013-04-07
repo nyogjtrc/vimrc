@@ -1,4 +1,3 @@
-
 execute pathogen#infect()
 syntax on
 
@@ -26,14 +25,6 @@ set t_Co=256
 
 set scrolloff=3 "保持上下有三行的距離
 
-" 設定滑鼠游標，不管 normal , visual , select mode 都要用 輸入文字 的游標
-set mouseshape+=n:beam,v:beam,s:beam,i:beam
-
-" 游標形狀跟閃爍速度
-set guicursor+=n-v-c:block-cursor-blinkwait300-blinkon90-blinkoff90
-set guicursor+=i:ver3-cursor-blinkwait200-blinkon110-blinkoff110
-set guicursor+=v:ver90-cursor-blinkwait200-blinkon150-blinkoff150
-
 " set fileencoding
 set fileencodings=utf-8,big5,cp936,default
 
@@ -44,19 +35,15 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd Filetype c setlocal omnifunc=ccomplete#Complete
 autocmd Filetype cpp setlocal omnifunc=cppcomplete#Complete
-autocmd Filetype python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType perl set omnifunc=perlcomplete#Complete
 
 " syntax set
-au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-au BufRead,BufNewFile *.html set filetype=smarty
-autocmd BufNewFile,BufRead *.json set ft=javascript
+"au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+"au BufRead,BufNewFile *.html set filetype=smarty
+au BufNewFile,BufRead *.json set ft=javascript
 
 " statusline
 set ls=2
 set statusline=%<%f\ %m%=\ %h%r\ %-19(\ [ASCII:%b]\ [%p%%]\ %3l,%02c%03V%)%y
-"set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
-"set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ [%p%]
 highlight StatusLine term=bold,reverse cterm=bold,reverse
 
 " Removing tailing spaces.
