@@ -1,3 +1,5 @@
+" source: http://vim.wikia.com/wiki/Better_indent_support_for_php_with_html
+"
 " Better indent support for PHP by making it possible to indent HTML sections
 " as well.
 if exists("b:did_indent")

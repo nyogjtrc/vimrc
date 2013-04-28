@@ -29,12 +29,12 @@ set scrolloff=3 "保持上下有三行的距離
 set fileencodings=utf-8,big5,cp936,default
 
 filetype plugin indent on
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd Filetype c setlocal omnifunc=ccomplete#Complete
-autocmd Filetype cpp setlocal omnifunc=cppcomplete#Complete
+"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+"autocmd Filetype c setlocal omnifunc=ccomplete#Complete
+"autocmd Filetype cpp setlocal omnifunc=cppcomplete#Complete
 
 " syntax set
 "au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
