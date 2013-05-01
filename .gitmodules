@@ -19,3 +19,6 @@
 [submodule "bundle/indenthtml"]
 	path = bundle/indenthtml
 	url = git://github.com/vim-scripts/indenthtml.vim.git
+[submodule "bundle/SearchComplete"]
+	path = bundle/SearchComplete
+	url = git://github.com/vim-scripts/SearchComplete.git
