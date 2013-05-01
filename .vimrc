@@ -42,6 +42,9 @@ highlight StatusLine term=bold,reverse cterm=bold,reverse
 " Removing tailing spaces.
 au! BufWrite *.php mark ' | silent! %s/\s\+$// | norm ''
 
+" Check php syntax
+map <C-B> :!php -l %<CR>
+
 " Make vim setting works immediately.
 autocmd! BufWritePost .vimrc source %
 
