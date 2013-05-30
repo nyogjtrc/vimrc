@@ -42,8 +42,6 @@ highlight StatusLine term=bold,reverse cterm=bold,reverse
 " Removing tailing spaces.
 au! BufWrite *.php mark ' | silent! %s/\s\+$// | norm ''
 
-" Check php syntax
-map <C-B> :!php -l %<CR>
 
 " Make vim setting works immediately.
 autocmd! BufWritePost .vimrc source %
@@ -60,6 +58,8 @@ map <silent> <F2> :TagbarToggle<CR>
 map <F5> <Esc>:EnableFastPHPFolds<Cr>
 map <F6> <Esc>:EnablePHPFolds<Cr>
 map <F7> <Esc>:DisablePHPFolds<Cr>
+" Check php syntax
+map <F12> <Esc>:!php -l %<CR>
 
 " for netrw
 let g:netrw_liststyle = 3
