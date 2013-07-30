@@ -5,6 +5,7 @@ syntax on
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set tabstop=4
 
 set showmode
 " 顯示游標所在行列
