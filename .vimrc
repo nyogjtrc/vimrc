@@ -41,7 +41,7 @@ set statusline=%<%f\ %m%=\ %h%r\ %-19(\ [ASCII:%b]\ [%p%%]\ %3l,%02c%03V%)%y
 highlight StatusLine term=bold,reverse cterm=bold,reverse
 
 " Removing tailing spaces.
-au! BufWrite *.php mark ' | silent! %s/\s\+$// | norm ''
+" au! BufWrite *.php mark ' | silent! %s/\s\+$// | norm ''
 
 
 " Make vim setting works immediately.
