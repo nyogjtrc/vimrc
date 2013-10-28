@@ -9,3 +9,7 @@ curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen
 [ -e "~/.gvimrc" ] && echo ".gvimrc exists." >&2
 
 
+# create link
+ln -s ~/vimrc ~/.vim
+ln -s ~/vimrc/.vimrc .vimrc
+ln -s ~/vimrc/.gvimrc .gvimrc
