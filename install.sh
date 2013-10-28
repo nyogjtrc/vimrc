@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# update submodule
+git submodule update --init
+
 # create link
 rm ~/.vim
 ln -s ~/vimrc ~/.vim
