@@ -1,5 +1,7 @@
 #!/bin/bash
 
+VIMRC_PATH=$(pwd)
+
 # update submodule
 git submodule update --init
 
@@ -12,3 +14,7 @@ ln -s ~/vimrc/vimrc ~/.vimrc
 
 rm ~/.gvimrc
 ln -s ~/vimrc/gvimrc ~/.gvimrc
+
+# make php-ctags
+cd bundle/tagbar-phpctags.vim/
+make

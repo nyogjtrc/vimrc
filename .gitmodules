@@ -37,3 +37,6 @@
 [submodule "bundle/vim-autoclose"]
 	path = bundle/vim-autoclose
 	url = git://github.com/Townk/vim-autoclose
+[submodule "bundle/tagbar-phpctags.vim"]
+	path = bundle/tagbar-phpctags.vim
+	url = git@github.com:vim-php/tagbar-phpctags.vim.git
