@@ -15,6 +15,12 @@ all the bundle i installed.
 
 [tagbar](http://majutsushi.github.io/tagbar/)
 
+## tagbar-phpctags
+
+[tagbar-phpctags](https://github.com/vim-php/tagbar-phpctags.vim)
+
+run ``make`` at **bundle/tagbar-phpctags.vim** to install phpctags (already write into install.sh)
+
 ## align
 
 * ``\t=`` Align assignments.
