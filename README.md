@@ -1,22 +1,21 @@
-vimrc
-=====
+# vimrc
 
 this is my vim configuration.
 
 
-bundle
-======
+# bundle
 
 all the bundle i installed.
 
-nerdtree
---------
+## vim-pathogen
 
-tarbar
-------
+## nerdtree
 
-align
------
+## tagbar
+
+[tagbar](http://majutsushi.github.io/tagbar/)
+
+## align
 
 * ``\t=`` Align assignments.
 * ``\t,`` Align on commas.
@@ -24,15 +23,27 @@ align
 * ``\acom`` Align comments.
 * ``\Htd`` Align HTML tables.
 
-nerdcommmenter
---------------
+## nerdcommmenter
 
 * ``\cc``  Add general comment.
 * ``\cm``  Add block comment.
 * ``\cu``  Remove comment.
 
-supertab
---------
+## supertab
 
-phpfolding
-----------
+## phpfolding
+
+## indenthtml
+
+## SearchComplete
+
+## ctrlp
+
+## vim-surround
+
+## vim-gitgutter
+
+## autoclose
+
+[autoclose](https://github.com/Townk/vim-autoclose)
+
