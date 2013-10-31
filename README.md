@@ -53,3 +53,6 @@ run ``make`` at **bundle/tagbar-phpctags.vim** to install phpctags (already writ
 
 [autoclose](https://github.com/Townk/vim-autoclose)
 
+## matchit
+
+[matchit](https://github.com/vim-scripts/matchit.zip)
