@@ -1,5 +1,8 @@
+" pathogen setting
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+
+
 syntax on
 
 " Replace tab with 4 spaces.
@@ -21,6 +24,8 @@ set ignorecase
 set incsearch
 
 set ai "autoindent
+
+" color
 colorscheme torte
 set t_Co=256
 
@@ -42,11 +47,10 @@ set statusline=%<%f\ %m%=\ %h%r\ %-19(\ [ASCII:%b]\ [%p%%]\ %3l,%02c%03V%)%y
 highlight StatusLine term=bold,reverse cterm=bold,reverse
 
 " Removing tailing spaces.
-" au! BufWrite *.php mark ' | silent! %s/\s\+$// | norm ''
-
+au! BufWrite *.php mark ' | silent! %s/\s\+$// | norm ''
 
 " Make vim setting works immediately.
-autocmd! BufWritePost .vimrc source %
+autocmd! bufwritepost .vimrc source ~/.vimrc
 
 " Set foldering.
 set foldmethod=manual
@@ -55,13 +59,15 @@ highlight Folded ctermbg=black ctermfg=darkcyan
 let g:DisableAutoPHPFolding = 1
 
 " Set F1 - F12 shortcut keys
-nnoremap <silent> <F1> :NERDTree<CR>
-map <silent> <F2> :TagbarToggle<CR>
-map <F5> <Esc>:EnableFastPHPFolds<Cr>
-map <F6> <Esc>:EnablePHPFolds<Cr>
-map <F7> <Esc>:DisablePHPFolds<Cr>
+nnoremap <silent> <F1> :NERDTreeToggle<cr>
+
+map <silent> <F2> :TagbarToggle<cr>
+map <F5> <Esc>:EnableFastPHPFolds<cr>
+map <F6> <Esc>:EnablePHPFolds<cr>
+map <F7> <Esc>:DisablePHPFolds<cr>
+
 " Check php syntax
-map <F12> <Esc>:!php -l %<CR>
+map <F12> <Esc>:!php -l %<cr>
 
 " for netrw
 let g:netrw_liststyle = 3
