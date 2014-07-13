@@ -45,7 +45,7 @@ set laststatus=2
 "highlight StatusLine term=bold,reverse cterm=bold,reverse
 
 " airline
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 " Removing tailing spaces.
 au! BufWrite *.php mark ' | silent! %s/\s\+$// | norm ''
