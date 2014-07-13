@@ -56,3 +56,13 @@ run ``make`` at **bundle/tagbar-phpctags.vim** to install phpctags (already writ
 ## matchit
 
 [matchit](https://github.com/vim-scripts/matchit.zip)
+
+## airline
+
+[vim-airline](https://github.com/bling/vim-airline)
+
+### use PowerlineSymbols
+
+add `let g:airline_powerline_fonts = 1` to vimrc.
+
+install font with [powerline font installation](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation).
