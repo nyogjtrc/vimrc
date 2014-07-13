@@ -80,3 +80,8 @@ let g:tagbar_width = 30
 
 " supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" syntastic
+let g:syntastic_check_on_open=1
+
+let g:syntastic_php_checkers = ['php'] " temporary close phpcs, phpmd
