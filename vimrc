@@ -79,3 +79,6 @@ let g:netrw_winsize = 30
 " Tagbar plugin.
 let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_width = 30
+
+" supertab
+let g:SuperTabDefaultCompletionType = "<c-n>"
