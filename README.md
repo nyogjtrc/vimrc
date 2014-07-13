@@ -1,74 +1,70 @@
 # vimrc
 
 this is my vim configuration.
+for basic use and php develop.
 
+# installation
+
+you have to install **vim** and **git** first. then running command:
+
+```bash
+$ git clone git@github.com:nyogjtrc/vimrc.git
+$ cd vimrc
+$ ./install.sh
+```
 
 # bundle
 
-all the bundle i installed.
+the bundles I installed as below:
 
-## vim-pathogen
+* [vim-pathogen](https://github.com/tpope/vim-pathogen): plugin manager that i choose
 
-[vim-pathogen](https://github.com/tpope/vim-pathogen)
+* [nerdtree](https://github.com/scrooloose/nerdtree): filesystem explorer
 
-vim plugin manager that i chose
+* [tagbar](http://majutsushi.github.io/tagbar/)
 
-## nerdtree
+* [tagbar-phpctags](https://github.com/vim-php/tagbar-phpctags.vim)
 
-## tagbar
+    run ``make`` at **bundle/tagbar-phpctags.vim** to install phpctags (already write into install.sh)
 
-[tagbar](http://majutsushi.github.io/tagbar/)
+* align
 
-## tagbar-phpctags
+    ``\t=`` Align assignments.  
+    ``\t,`` Align on commas.  
+    ``\tsp`` Align on whitespace.  
+    ``\acom`` Align comments.  
+    ``\Htd`` Align HTML tables.  
 
-[tagbar-phpctags](https://github.com/vim-php/tagbar-phpctags.vim)
+* nerdcommmenter
 
-run ``make`` at **bundle/tagbar-phpctags.vim** to install phpctags (already write into install.sh)
+    ``\cc``  Add general comment.  
+    ``\cm``  Add block comment.  
+    ``\cu``  Remove comment.  
 
-## align
+* [supertab](https://github.com/ervandew/supertab): use <tab> for all insert completion
 
-* ``\t=`` Align assignments.
-* ``\t,`` Align on commas.
-* ``\tsp`` Align on whitespace.
-* ``\acom`` Align comments.
-* ``\Htd`` Align HTML tables.
+* phpfolding
 
-## nerdcommmenter
+* indenthtml
 
-* ``\cc``  Add general comment.
-* ``\cm``  Add block comment.
-* ``\cu``  Remove comment.
+* SearchComplete
 
-## supertab
+* [ctrlp](https://github.com/kien/ctrlp.vim): nice file finder
 
-[supertab](https://github.com/ervandew/supertab)
+* vim-surround
 
-use <tab> for all insert completion
+* [autoclose](https://github.com/Townk/vim-autoclose)
 
-## phpfolding
+* [matchit](https://github.com/vim-scripts/matchit.zip)
 
-## indenthtml
+* [vim-airline](https://github.com/bling/vim-airline)
 
-## SearchComplete
+    _use PowerlineSymbols_
 
-## ctrlp
+    if you want to use powerline symbols, just add `let g:airline_powerline_fonts = 1` to vimrc.
 
-## vim-surround
+    install font with [powerline font installation](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation).
 
-## autoclose
+* [vim-fugitive](https://github.com/tpope/vim-fugitive): a beautiful and colorful status bar
 
-[autoclose](https://github.com/Townk/vim-autoclose)
-
-## matchit
-
-[matchit](https://github.com/vim-scripts/matchit.zip)
-
-## airline
-
-[vim-airline](https://github.com/bling/vim-airline)
-
-### use PowerlineSymbols
-
-add `let g:airline_powerline_fonts = 1` to vimrc.
-
-install font with [powerline font installation](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation).
+* [syntastic](https://github.com/scrooloose/syntastic): syntax checker
