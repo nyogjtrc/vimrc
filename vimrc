@@ -2,7 +2,6 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-
 syntax on
 
 " Replace tab with 4 spaces.
@@ -12,18 +11,17 @@ set softtabstop=4
 set tabstop=4
 
 set showmode
-" 顯示游標所在行列
 set cursorline
 
 set ruler
 set number
 
 " hightlight search
-set hls
+set hlsearch
 set ignorecase
 set incsearch
 
-set ai "autoindent
+set autoindent
 
 " color
 colorscheme torte
