@@ -41,11 +41,10 @@ filetype plugin indent on
 "au BufRead,BufNewFile *.html set filetype=smarty
 au BufNewFile,BufRead *.json set ft=javascript
 
-" statusline | powerline
+" statusline
 set ls=2
-"set statusline=%<%f\ %m%=\ %h%r\ %-19(\ [ASCII:%b]\ [%p%%]\ %3l,%02c%03V%)%y
-"highlight StatusLine term=bold,reverse cterm=bold,reverse
-let g:Powerline_symbols = 'fancy'
+set statusline=%<%f\ %m%=\ %h%r\ %-19(\ [ASCII:%b]\ [%p%%]\ %3l,%02c%03V%)%y
+highlight StatusLine term=bold,reverse cterm=bold,reverse
 
 " Removing tailing spaces.
 au! BufWrite *.php mark ' | silent! %s/\s\+$// | norm ''
