@@ -9,6 +9,10 @@ all the bundle i installed.
 
 ## vim-pathogen
 
+[vim-pathogen](https://github.com/tpope/vim-pathogen)
+
+vim plugin manager that i chose
+
 ## nerdtree
 
 ## tagbar
@@ -37,6 +41,10 @@ run ``make`` at **bundle/tagbar-phpctags.vim** to install phpctags (already writ
 
 ## supertab
 
+[supertab](https://github.com/ervandew/supertab)
+
+use <tab> for all insert completion
+
 ## phpfolding
 
 ## indenthtml
@@ -46,8 +54,6 @@ run ``make`` at **bundle/tagbar-phpctags.vim** to install phpctags (already writ
 ## ctrlp
 
 ## vim-surround
-
-## vim-gitgutter
 
 ## autoclose
 
